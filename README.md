@@ -1,27 +1,68 @@
-# React + TypeScript + Vite
+![image](https://github.com/Inacioluz/Ignite-time/assets/108021488/0403718d-589e-4c1c-9c23-b3d13f4005ca)t
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# fundamentos em TypeScript
 
-Currently, two official plugins are available:
+# Projeto React com TypeScript e Vite
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Este é um projeto de exemplo que demonstra como criar uma aplicação web utilizando React, TypeScript e Vite como bundler.
 
-## Expanding the ESLint configuration
+## Pré-requisitos
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Certifique-se de ter o Node.js e o npm (ou yarn) instalados em sua máquina.
 
-- Configure the top-level `parserOptions` property like this:
+- Node.js: [Download](https://nodejs.org/)
+- npm: [Download](https://www.npmjs.com/get-npm)
+- yarn (opcional): [Instruções de Instalação](https://classic.yarnpkg.com/en/docs/install/)
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+## Como Iniciar
+
+1. Clone este repositório para o seu ambiente local:
+
+```
+git clone https://github.com/seu-usuario/nome-do-repositorio.git
+```
+## Navegue até o diretório do projeto:
+
+```
+cd nome-do-repositorio
+```
+## Instale as dependências utilizando npm ou yarn:
+
+```
+npm install
+```
+```
+yarn
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Inicie o servidor de desenvolvimento:
+```
+npm run dev
+```
+```
+yarn dev
+```
+
+# Isso iniciará o servidor de desenvolvimento utilizando o Vite.
+
+Abra o navegador e acesse http://localhost:3000 para ver a aplicação em execução.
+Comandos Disponíveis
+dev: Inicia o servidor de desenvolvimento.
+build: Compila a aplicação para produção.
+serve: Serve a aplicação após a compilação.
+Estrutura do Projeto
+src/: Contém o código-fonte da aplicação.
+
+index.tsx: Ponto de entrada da aplicação.
+Outros componentes e arquivos relacionados ao React.
+public/: Contém arquivos públicos acessíveis diretamente.
+
+index.html: Página HTML principal.
+package.json: Arquivo de configuração do npm/yarn.
+
+tsconfig.json: Arquivo de configuração do TypeScript.
+
+vite.config.js: Arquivo de configuração do Vite.
+
+Contribuição
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e pull requests.
