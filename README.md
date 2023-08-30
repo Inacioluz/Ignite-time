@@ -19,7 +19,7 @@ Certifique-se de ter o Node.js e o npm (ou yarn) instalados em sua máquina.
 1. Clone este repositório para o seu ambiente local:
 
 ```
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
+git clone https://github.com/Inacioluz/Ignite-time.git
 ```
 ## Navegue até o diretório do projeto:
 
