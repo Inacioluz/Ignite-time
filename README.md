@@ -24,7 +24,7 @@ git clone https://github.com/seu-usuario/nome-do-repositorio.git
 ## Navegue até o diretório do projeto:
 
 ```
-cd nome-do-repositorio
+cd watch-time-ignite
 ```
 ## Instale as dependências utilizando npm ou yarn:
 
