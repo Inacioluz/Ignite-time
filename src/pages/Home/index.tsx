@@ -12,6 +12,7 @@ import {
   StartCountdownButton,
   TaskInput,
   MinutesAmountInput,
+  StoptCountdownButton,
 } from './styles'
 
 const newCycleFormValidationSchema = zod.object({
@@ -29,6 +30,7 @@ interface Cycle {
   task: string
   minutesAmount: number
   startDate: Date
+  interruptCycle: Date
 }
 
 export function Home() {
@@ -78,6 +80,22 @@ export function Home() {
     reset()
   }
 
+  function handInterruptCycle() {
+    setActiveCycleId(null)
+
+    setCycles(
+      cycles.map((cycle) => {
+        if (cycle.id === activeCycleId) {
+          return { ...cycle, interruptDate: new Date() }
+        } else {
+          return cycle
+        }
+      }),
+    )
+  }
+
+  console.log(cycles)
+
   const totalSeconds = activeCycle ? activeCycle.minutesAmount * 60 : 0
   const currentSeconds = activeCycle ? totalSeconds - amountSecondsPassed : 0
 
@@ -105,6 +123,7 @@ export function Home() {
             id="task"
             list="task-suggestions"
             placeholder="Dê um nome para o seu projeto"
+            disabled={!!activeCycle}
             {...register('task')}
           />
 
@@ -122,6 +141,7 @@ export function Home() {
             step={5}
             min={5}
             max={60}
+            disabled={!!activeCycle}
             {...register('minutesAmount', { valueAsNumber: true })}
           />
 
@@ -137,10 +157,10 @@ export function Home() {
         </CountdownContainer>
 
         {activeCycle ? (
-          <StopCountdownButton type="button">
+          <StoptCountdownButton onClick={handInterruptCycle} type="button">
             <HandPalm size={24} />
-            Começar
-          </StopCountdownButton>
+            Interromper
+          </StoptCountdownButton>
         ) : (
           <StartCountdownButton disabled={isSubmitDisabled} type="submit">
             <Play size={24} />
